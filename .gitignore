@@ -1,0 +1,5 @@
+*.class
+*.xml
+*.mf
+Basics/build/*
+Basics/nbproject/*

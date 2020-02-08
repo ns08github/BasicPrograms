@@ -1,4 +1,4 @@
-package String.RemoveRepetativeCharacter;
+package String;
 
 
 import org.jetbrains.annotations.NotNull;

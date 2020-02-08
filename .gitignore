@@ -3,3 +3,5 @@
 *.mf
 Basics/build/*
 Basics/nbproject/*
+*.kotlin_module
+*.iml

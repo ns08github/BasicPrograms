@@ -1,6 +1,8 @@
 package Array;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -22,7 +24,6 @@ public class SumOfTwoEqualsTarget {
         }
         System.out.println("Enter target");
         int target = scanner.nextInt();
-        obj.print(a);
         obj.findSumEqualTarget(a, target);
     }
 
@@ -36,15 +37,13 @@ public class SumOfTwoEqualsTarget {
     public void findSumEqualTarget(int[] a, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < a.length; i++) {
-            int diff = Math.abs(a[i] - target);
-            map.put(diff, i);
-        }
-        for (int i = 0; i < a.length; i++) {
-            if (map.containsKey(a[i])) {
-                System.out.println();
-                System.out.println("[" + i + "," + map.get(a[i]) + "]");
+            int diff = target-a[i];
+
+            if(map.containsKey(diff)){
+                System.out.println("[" +map.get(diff) + "," + i + "]");
                 return;
             }
+            map.put(a[i],i);
         }
     }
 }
